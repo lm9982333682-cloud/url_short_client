@@ -97,7 +97,7 @@ const UrlShortener = () => {
 
     // copy short url
     const handleCopy = async (code) => {
-        const shortUrl = `http://localhost:7000/${code}`;
+        const shortUrl = `https://url-short-server.onrender.com/${code}`;
         setIsCopy(code);
 
         await navigator.clipboard.writeText(shortUrl);
@@ -148,7 +148,7 @@ const UrlShortener = () => {
                     shorten.map(obj => <div key={obj._id} className="mt-2 flex items-center justify-between rounded-md border border-gray-200   px-4 py-3 shadow-sm">
 
                         <p className="font-mono text-lg font-semibold text-[#b76f57]">
-                            http://localhost:3000/{obj.code}
+                            https://url-short-server.onrender.com/{obj.code}
                         </p>
 
 
@@ -158,7 +158,7 @@ const UrlShortener = () => {
                              ${isCopy === obj.code ? "border-green-400 text-green-500 " : "border-gray-300"}
                              `}>
                             {isCopy === obj.code ? " Copied" : "Copy"}
-                        </button> 
+                        </button>
 
 
 
@@ -177,7 +177,7 @@ const UrlShortener = () => {
                         data.map(obj => <div key={obj._id} className="mt-2 flex items-center justify-between rounded-md border border-gray-200 bg-white px-4 py-3 shadow-sm">
                             <div className="flex items-center gap-8">
                                 <p className="font-mono text-lg font-semibold text-[#b76f57]">
-                                    http://localhost:3000/{obj.code}
+                                    https://url-short-server.onrender.com/{obj.code}
                                 </p>
 
                                 <span className="text-gray-500">
